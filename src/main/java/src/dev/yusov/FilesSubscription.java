@@ -1,7 +1,7 @@
 package src.dev.yusov;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import src.dev.yusov.logic.DocumentSignature;
+
 import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -16,11 +16,21 @@ public class FilesSubscription {
 
     }
 
-    public static void getPathFile(String pathFile) throws NoSuchAlgorithmException, IOException, InvalidKeyException, SignatureException {
+    // Создание ЭЦП на документе
+    public static void setPathFile(String pathFile) throws NoSuchAlgorithmException, IOException, InvalidKeyException, SignatureException {
 
-        DocumentSignature documentSignature = new DocumentSignature("",1,"");
-        documentSignature.createElectronicDigSignature(new FileInputStream(pathFile));
+        DocumentSignature documentSignature = new DocumentSignature("RSA",2048,"SHA256withRSA");
+        documentSignature.createElectronicDigSignature(pathFile);
 
     }
+
+    // Проверка имеется ли ЭЦП на документе
+    public static void docVer(String pathFile) {
+
+
+
+    }
+
+
 
 }

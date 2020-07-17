@@ -1,4 +1,4 @@
-package src.dev.yusov;
+package src.dev.yusov.logic;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -15,6 +15,7 @@ public class DocumentSignature {
     private Signature signature;                 // Цифровая подпсь
     private String getPathFile;                  // Полный путь к файлу
     private byte[] realSign;
+    private static int count;                           // Счётчик
 
     /**
      *  Если нет пары ключей, генерируем их.
@@ -34,11 +35,12 @@ public class DocumentSignature {
     /**
      *  Создание ЭЦП
      */
-    public void createElectronicDigSignature(FileInputStream message) throws InvalidKeyException, IOException, SignatureException {
+    public void createElectronicDigSignature(String pathFile) throws InvalidKeyException, IOException, SignatureException {
         // Инициализация экземпляра подписи
         signature.initSign(privateKey);
 
         // Данные считываются по 200 байт
+        FileInputStream message = new FileInputStream(pathFile);
         BufferedInputStream bf = new BufferedInputStream(message, 200);
         byte[] data = new byte[bf.available()];
         bf.read(data);
@@ -52,10 +54,26 @@ public class DocumentSignature {
 
         // DELETE FAIL
 
-//        FileOutputStream fileOutputStream = new FileOutputStream();
+        FileOutputStream fileOutputStream = new FileOutputStream("D:\\Programming\\ForTest\\ECPt\\" + nameNewFile(pathFile));
         // Записываем массив байт в файл и заканчиваем.
+        fileOutputStream.write(realSign);
+        fileOutputStream.close();
+
+    }
 
 
+
+
+
+
+
+
+    // Можно вынести это в отдельный класс
+
+    // Оставляет из полного пути только имя файла. Делает имя файла уникальным.
+    public static String nameNewFile(String pathFile) {
+        count++;
+        return pathFile.substring(pathFile.lastIndexOf('\\')+1,pathFile.lastIndexOf('.')) + count + ".csv";
     }
 
 

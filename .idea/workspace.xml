@@ -11,11 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93dc8ab6-ddf1-401c-b9cb-176839e9d8e1" name="Default Changelist" comment="Crypto">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Instructions" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/dev/yusov/FilesSubscription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/dev/yusov/logic/DocumentVerification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/dev/yusov/logic/SaveKeys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/src/dev/yusov/MessageSignature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/dev/yusov/DocumentSignature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Read" beforeDir="false" afterPath="$PROJECT_DIR$/src/Read" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/src/dev/yusov/DocumentSignature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/dev/yusov/logic/DocumentSignature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/src/dev/yusov/FilesSubscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/dev/yusov/FilesSubscription.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/src/dev/yusov/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/dev/yusov/Solution.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +40,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="1elubrbtkQIEOKiPNbtoGCOZql7" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -51,6 +56,26 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.dev.yusov.Solution" />
+      <module name="ProjectCryptography" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.dev.yusov.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Solution" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -84,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594911599450</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Crypto">
+      <created>1594937769008</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594937769008</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,9 +146,41 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1594908907727" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1594911602450">
+    <state width="1323" height="131" key="GridCell.Tab.0.bottom" timestamp="1594974410367">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1594911602450" />
+    <state width="1323" height="131" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1594974410367" />
+    <state width="1323" height="131" key="GridCell.Tab.0.center" timestamp="1594974410367">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="131" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1594974410367" />
+    <state width="1323" height="131" key="GridCell.Tab.0.left" timestamp="1594974410367">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="131" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1594974410367" />
+    <state width="1323" height="131" key="GridCell.Tab.0.right" timestamp="1594974410367">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="131" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1594974410367" />
+    <state width="1323" height="131" key="GridCell.Tab.1.bottom" timestamp="1594974410368">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="131" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1594974410368" />
+    <state width="1323" height="131" key="GridCell.Tab.1.center" timestamp="1594974410368">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="131" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1594974410368" />
+    <state width="1323" height="131" key="GridCell.Tab.1.left" timestamp="1594974410368">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="131" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1594974410368" />
+    <state width="1323" height="131" key="GridCell.Tab.1.right" timestamp="1594974410368">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="131" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1594974410368" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1594937773394">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1594937773394" />
   </component>
 </project>
