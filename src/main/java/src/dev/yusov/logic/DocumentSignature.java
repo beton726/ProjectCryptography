@@ -54,7 +54,7 @@ public class DocumentSignature {
 
         // DELETE FAIL
 
-        FileOutputStream fileOutputStream = new FileOutputStream("D:\\Programming\\ForTest\\ECPt\\" + nameNewFile(pathFile));
+        FileOutputStream fileOutputStream = new FileOutputStream("D:\\ElectronicDigitalSignature\\ECPt\\" + nameNewFile(pathFile));
         // Записываем массив байт в файл и заканчиваем.
         fileOutputStream.write(realSign);
         fileOutputStream.close();

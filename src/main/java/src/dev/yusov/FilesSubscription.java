@@ -18,8 +18,8 @@ public class FilesSubscription {
 
     // Создание ЭЦП на документе
     public static void setPathFile(String pathFile) throws NoSuchAlgorithmException, IOException, InvalidKeyException, SignatureException {
-
-        DocumentSignature documentSignature = new DocumentSignature("RSA",2048,"SHA256withRSA");
+        // Три параметра: 1 -
+        DocumentSignature documentSignature = new DocumentSignature("RSA",2048,"SHA1WithRSA");
         documentSignature.createElectronicDigSignature(pathFile);
 
     }

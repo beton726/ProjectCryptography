@@ -8,7 +8,7 @@ import java.security.SignatureException;
 public class Solution {
     public static void main(String[] args) throws SignatureException, NoSuchAlgorithmException, InvalidKeyException, IOException {
         // Пока что подписываем только 1 файл
-        FilesSubscription.setPathFile("D:\\Programming\\ForTest\\ECPo\\test.csv");
+        FilesSubscription.setPathFile("D:\\ElectronicDigitalSignature\\ECPo\\test.csv");
 
 
     }
